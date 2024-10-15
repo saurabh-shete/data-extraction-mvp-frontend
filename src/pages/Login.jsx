@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuthStore } from '../store/authStore.js'; // Zustand store for auth state
 
@@ -8,6 +8,12 @@ const LoginPage = () => {
   const navigate = useNavigate();
   const login = useAuthStore((state) => state.login); // Zustand store login function
   const errorMessage = useAuthStore((state) => state.errorMessage); // Login error message from Zustand
+  const setErrorMessage = useAuthStore((state) => state.setErrorMessage); // Function to reset the error message
+
+  // Clear error message when the component mounts
+  useEffect(() => {
+    setErrorMessage('');
+  }, [setErrorMessage]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

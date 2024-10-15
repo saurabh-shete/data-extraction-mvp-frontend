@@ -34,7 +34,10 @@ const useAuthStore = create(
           return false;
         }
       },
-      logout: () => set({ token: null, user: null }), // Logout function
+      logout: () => set({ token: null, user: null }),
+
+      // New function to clear the error message
+      setErrorMessage: (message) => set({ errorMessage: message }),
     }),
     {
       name: 'auth-storage', // Persist in localStorage with this key
