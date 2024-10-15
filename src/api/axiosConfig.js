@@ -1,7 +1,8 @@
 import axios from 'axios';
 
+// Use Vite's import.meta.env to get the API URL from the environment variable
 const axiosInstance = axios.create({
-  baseURL: 'http://127.0.0.1:8000', // Base URL for your API
+  baseURL: import.meta.env.VITE_API_URL, // Vite's environment variable
   headers: {
     'Content-Type': 'application/json',
   },
