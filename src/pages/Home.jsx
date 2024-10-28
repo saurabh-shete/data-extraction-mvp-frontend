@@ -54,7 +54,7 @@ const Home = () => {
       <div className="flex justify-center mb-6">
         <input
           type="file"
-          accept=".pdf, .jpg, .png"
+          accept=".pdf, .jpg, .png, .jpeg"
           onChange={handleFileChange}
           className="block w-full text-sm text-gray-500
                      file:mr-4 file:py-2 file:px-4
