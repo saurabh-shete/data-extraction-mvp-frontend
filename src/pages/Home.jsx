@@ -45,9 +45,9 @@ const Home = () => {
 
   return (
     <div className="container mx-auto px-4 py-10">
-      <h1 className="text-4xl font-bold text-center mb-6">Extract Invoice Details from PDF</h1>
+      <h1 className="text-4xl font-bold text-center mb-6">Extract PO Details from PDF</h1>
       <p className="text-lg text-center text-gray-700 mb-8">
-        Upload your invoice file to extract details and review the results below!
+        Upload your PO file to extract details and review the results below!
       </p>
 
       {/* File Upload Section */}
@@ -75,7 +75,7 @@ const Home = () => {
       {/* JSON Display & Edit Section */}
       {jsonResult && (
         <div className="bg-gray-100 p-6 rounded-md shadow-md">
-          <h2 className="text-2xl font-semibold mb-4">Extracted Invoice Data</h2>
+          <h2 className="text-2xl font-semibold mb-4">Extracted PO Data</h2>
 
           {/* JSON Viewer */}
           <JsonView data={jsonResult} />
